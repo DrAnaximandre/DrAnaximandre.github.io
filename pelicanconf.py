@@ -3,9 +3,6 @@
 from __future__ import unicode_literals
 
 
-import os
-print("j am in "+ os.getcwd())
-
 THEME= 'pelican-twitchy'
 
 
@@ -42,8 +39,12 @@ DEFAULT_PAGINATION = 5
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-
+STATIC_PATHS = ['images/favicon.ico']
 PLUGINS = ["pelican_plugin-render_math"]
 DEFAULT_METADATA = {
     'status': 'draft',
+}
+
+EXTRA_PATH_METADATA = {
+    'images/favicon.ico': {'path': 'favicon.ico'}
 }
