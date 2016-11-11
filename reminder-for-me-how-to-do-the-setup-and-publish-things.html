@@ -191,8 +191,8 @@
 <li>check locally your modifications: <code>fab build</code> and <code>fab serve</code>, then <a href="http://localhost:8000">go there if you are running locally</a></li>
 <li>eventually, <code>git add &lt;your-modifications&gt;</code> and <code>git commit -m "i-changed-sources"</code> followed by <code>git push</code>. That should ensure that your sources are up-to-date.</li>
 <li>Still in source branch: <code>ghp-import -b master -m "i-changed-the-output" output</code></li>
-<li>then <code>git push</code></li>
-<li>prey</li>
+<li>then <code>git push --all</code> (the all flag pushes the master branch even if you're working with source)</li>
+<li>prey but it should work.</li>
 </ul>
                 </div>
                 <footer class="text-right">
