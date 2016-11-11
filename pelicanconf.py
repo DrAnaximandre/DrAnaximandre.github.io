@@ -43,7 +43,7 @@ DEFAULT_PAGINATION = 5
 #RELATIVE_URLS = True
 
 
-PLUGINS = ["render_math"]
+PLUGINS = ["pelican_plugin-render_math"]
 DEFAULT_METADATA = {
     'status': 'draft',
 }
