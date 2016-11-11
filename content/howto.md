@@ -21,7 +21,8 @@ Usual loop
 ==========
 
 * do modifications
-* check locally `fab build` and `fab serve`, then [go there if you are running locally](http://localhost:8000)
-* in source branch: `ghp-import -b master -m "i-changed-this" output`
-* then `git push --all`
+* check locally your modifications: `fab build` and `fab serve`, then [go there if you are running locally](http://localhost:8000)
+* eventually, `git add <your-modifications>` and `git commit -m "i-changed-sources"` followed by `git push`. That should ensure that your sources are up-to-date.
+* Still in source branch: `ghp-import -b master -m "i-changed-the-output" output`
+* then `git push`
 * prey
