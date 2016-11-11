@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="DrAnaximandre" />
+        <meta name="description" content="A bit of sensitivity analysis." />
+
+
+    <title>Sensitivity Analysis - the basics - Asmall7</title>
+
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
+
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/theme/css/pygments/native.css" rel="stylesheet" />
+    
+    <link href="/theme/css/pelican-twitchy.min.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Feeds -->
+</head>
+<body data-spy="scroll" data-target="#scrollspy">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper-small" class="twitchy-background">
+            <ul id="accordion-small" class="sidebar-nav sidebar-nav-small">
+                <li>
+        <a href="" title="Asmall7" class="collapsed">
+            <span class="glyphicon glyphicon-home"></span>
+        </a>
+    </li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="/archives.html" title="Recent Articles" class="collapsed">
+            <span class="glyphicon glyphicon-th-list"></span>
+        </a>
+    </li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion-small" href="#collapse-social-small" title="Social" class="collapsed">
+                        <i class="fa fa-users padding-small"></i>
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social-small" class="collapse ">
+                    <li>
+                        <a href="#" title="Another social link"><i class="fa fa-another-social-link-square fa-lg padding-small"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" title="You can add links in your config file"><i class="fa fa-you-can-add-links-in-your-config-file-square fa-lg padding-small"></i></a>
+                    </li>
+                </ul></li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="#" title="Back to top" class="collapsed">
+            <span class="fa fa-arrow-up"></span>
+        </a>
+    </li>
+            </ul>
+        </div>
+        <div id="sidebar-wrapper" class="twitchy-background">
+            <ul id="accordion" class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="/">
+                            <span class="glyphicon glyphicon-home padding-small"></span>
+                            Asmall7
+                    </a>
+                </li>
+                    <li>
+                        <a href="/archives.html">
+                            <span class="glyphicon glyphicon-th-list padding-small"></span>
+                            Recent Articles
+                        </a>
+                    </li>
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-social">
+                        <i class="fa fa-users padding-small"></i>
+                        Contact
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="#" title="Another social link">
+                            <i class="fa fa-another-social-link-square fa-lg padding-small"></i>
+                            Another social link
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="You can add links in your config file">
+                            <i class="fa fa-you-can-add-links-in-your-config-file-square fa-lg padding-small"></i>
+                            You can add links in your config file
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-pages">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Pages
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-pages" class="sidebar_submenu collapse ">
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-categories">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Categories
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-categories" class="sidebar_submenu collapse ">
+                    <li >
+                        <a href="/category/dimension-reduction-data-visualization.html">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            Dimension reduction, Data Visualization
+                            <span class="badge pull-right categorybadge">1</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="/category/python-fractales-art.html">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            Python, Fractales, Art
+                            <span class="badge pull-right categorybadge">1</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="/category/sensitivity-analysis.html">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            Sensitivity Analysis
+                            <span class="badge pull-right categorybadge">1</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="/category/test.html">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            Test
+                            <span class="badge pull-right categorybadge">1</span>
+                        </a>
+                    </li>
+                </ul></li>
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- open/close sidebar -->
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+            <span id="right-arrow" class="glyphicon glyphicon-chevron-right"  title="expand sidebar"></span>
+            <span id="left-arrow" class="glyphicon glyphicon-chevron-left" title="minimize sidebar"></span>
+        </a>
+       <!-- /open/close sidebar -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+<section id="content">
+    <article>
+        <div class="row">
+            <div class="col-lg-9">
+                <header class="page-header">
+                    <h1>
+                        <a href="/sensitivity-analysis-the-basics.html"
+                           rel="bookmark"
+                           title="Permalink to Sensitivity Analysis - the basics">
+                            Sensitivity Analysis - the basics
+                        </a>
+                        <small>
+<div class="post-info">
+    <div class="publish-info-block">
+        <small>
+            <span class="published">
+                <i class="fa fa-calendar padding-small"></i><time datetime="2015-12-01T00:00:00-05:00"> Tue 01 December 2015</time>
+            </span>
+            <span class="category">
+                <i class="fa fa-folder-open padding-small"></i><a href="/category/sensitivity-analysis.html">Sensitivity Analysis</a>
+            </span>
+        </small>
+    </div>
+</div><!-- /.post-info -->                        </small>
+                    </h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="entry-content">
+                    <h2>"What is a model" and numerical experiments</h2>
+<p>I worked in different places in applied mathematics and NONE of them had the same meaning behind the word "a model". So I can't really decide for other what a model is, but I can give the global idea of what I mean by that, and I'll use it for the rest of the article. 
+But first let's agree that a model is a representation, a mimic, most of time of the reality. To me it's related to the philosophical concept of ... "concept", since it's an abstraction of an idea.</p>
+<p>For instance, let's model a tree. Ok, well a tree has leaves, and a trunk and stuff. We can also make a more detailed model for the leaves, that have cells that do photosynthesis and pipelines that carry the stem or whatever it is. We can also have a model for the cells, and so on. Ok. That's one approach, complexity-based modelling maybe ? 
+But what if we're just interested in the height of a tree given the localisation of the said tree? We can also measure a bunch of trees in different locations, and say "well given the average tree heigh in that forest, we can say that blabla about this one imaginary tree" and so on. We have inputs and outputs in this model, that's more of a statistical one.
+One can think of many other ways to "model" stuff, when you tell me about that I think of a hybrid approach between the two presented above, that's related to the field of "numerical experiments".
+So we'll both do abstraction of ideas and measurement, put that in a big box and use the box to have predictions. We'll use the word "simulation" or "numerical simulation" sometimes, to refer to that process.</p>
+<p>The numerical simulation can be costly, due to the time needed to prepare the set of inputs or to the possibly large number of calculations needed (for instance, model of a tree, if you model the laws of viscose fluid propagation for all the pipelines of all the leaves of the tree, well I'm not going to lie: it's gonna take forever to compute one output).
+Moreover, the result of the simulation may be uncertain when randomness is involved, thus this topic is often referred to as "numerical experiments", as I said earlier.</p>
+<p>So to me a model is basically a (potentially super-duper) function that goes from a space of dimension $d$ to a space of dimension "not so high" ($1-10$, but let's say $1$ so far). Going back to that tree example, one input could be the diameter, another input could be the type of climate (tropical, cold, temperate ...) and the last one could be the genus (oak, pine, cheese tree, money tree ...). I'm not saying this model would be a good predictive one (that's an entire topic, the "goodness" of a model) but that's an example. So our model has $d=3$ inputs, 1 living in $\mathbb{R}$, and the two other living repectively in the spaces of Köppen–Geiger climates and tree genus.
+This whole example is going to be out of control really fast, so I'm changing the 2 categorical inputs to 2 quantitative ones: the number of leaves and the sunshine duration for that tree. </p>
+<h2>Sensitivity analysis in the context of numerical experiments</h2>
+<p>Sensitivity analysis (SA) is desined by Saltelli et al. [todo ref] as "the study of how the un
+ertainty in the output of a model can be apportioned to different sources of uncertainty in the model input".</p>
+                </div>
+                <footer class="text-right">
+                    <p>- DrAnaximandre</p>
+                </footer>
+            </div>
+        </div>
+    </article>
+</section>
+<footer>
+    <hr>
+    <div class="row">
+        <div class="col-lg-9 text-center">
+            <p><small>
+                Built by <a href="http://docs.getpelican.com/en/latest">Pelican</a> / <a href="https://github.com/ingwinlu/pelican-twitchy">pelican-twitchy</a>
+                &middot;                    &copy; 2015 DrAnaximandre
+            </small></p>
+        </div>
+    </div>
+</footer>            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery Version 1.11.2 -->
+    <script src="/theme/js/jquery-1.11.2.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/theme/js/bootstrap.min.js"></script>
+    <!-- twitchy Script -->
+    <script src="/theme/js/pelican_twitchy.min.js"></script>
+
+</body>
+</html>
