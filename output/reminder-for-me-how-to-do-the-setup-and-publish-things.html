@@ -181,18 +181,22 @@
             <div class="col-lg-9">
                 <div class="entry-content">
                     <h1>Useful links</h1>
-<p><a href="http://beneathdata.com/how-to/how-i-built-this-website/">The funding father</a>
-<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">MD cheatsheet</a></p>
+<ul>
+<li><a href="http://beneathdata.com/how-to/how-i-built-this-website/">The funding father</a></li>
+<li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">MD cheatsheet</a></li>
+</ul>
 <h1>Tune your sublime</h1>
-<p><a href="https://www.sublimetext.com/docs/2/spell_checking.html">Spellcheck</a></p>
+<ul>
+<li><a href="https://www.sublimetext.com/docs/2/spell_checking.html">Spellcheck</a></li>
+</ul>
 <h1>Usual loop</h1>
 <ul>
 <li>do modifications</li>
 <li>check locally your modifications: <code>fab build</code> and <code>fab serve</code>, then <a href="http://localhost:8000">go there if you are running locally</a></li>
 <li>eventually, <code>git add &lt;your-modifications&gt;</code> and <code>git commit -m "i-changed-sources"</code> followed by <code>git push</code>. That should ensure that your sources are up-to-date.</li>
 <li>Still in source branch: <code>ghp-import -b master -m "i-changed-the-output" output</code></li>
-<li>then <code>git push</code></li>
-<li>prey</li>
+<li>then <code>git push --all</code> (the all flag pushes the master branch even if you're working with source)</li>
+<li>prey but it should work.</li>
 </ul>
                 </div>
                 <footer class="text-right">
