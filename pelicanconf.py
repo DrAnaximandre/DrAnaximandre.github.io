@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 
 THEME= 'pelican-twitchy'
-
+SITESUBTITLE= u'There is a joke in this title and it is bad'
 
 AUTHOR = u'DrAnaximandre'
 SITENAME = u'Asmall7'
@@ -23,15 +23,11 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (
+	("1 - My a repos", 'https://github.com/DrAnaximandre'),
+	("2 - My friend's repos", 'https://github.com/tboquet'))
 
 DEFAULT_PAGINATION = 5
 

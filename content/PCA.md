@@ -5,8 +5,7 @@ Summary: A bit of Principal Component Analysis.
 
 
 
-First example
-=============
+## 1 - First example
 
 Let's try to understand the method on simulated data first. Let us denote $X\sim \mathcal{N}(2,1)$ and $Y\sim 1.5X+\mathcal{N}(1.2,1)$ and have $1000$ points from the join distributions, that will be our dataset.
 It is straightforward that the two variables are not independant since $Y$ is basically a coefficient times $X$ plus some noise and $X$ is noise. 
@@ -17,7 +16,7 @@ So we plot our data (using seaborn yay).
 
 ![Data with correlation](/images/figure_PCA_1.png)
 
-The correlation (on this sample) is 0.82, the marginal distributions are roughly normals (no shit Sherlock) and we have a kind of a line (like a trend) between the dots. The director coefficient of that line ... should be $1.5$. Advanced data science. 
+The correlation (on this sample) is 0.82, the marginal distributions are roughly normals (how surprising) and we have a kind of a line (like a trend) between the dots. The director coefficient of that line ... should be $1.5$. Advanced data science. 
 
 Now I'm going to perform a magic trick : the PCA. Let's use [scikit's](http://scikit-learn.org/stable/) implementation. It's basically 1 line of code and no, you don't need to know what a PCA is so far, just observe.
 
@@ -28,19 +27,17 @@ What the flip ? The marginals are still roughly normals (although the order of m
 What happened here ? And why is it useful/cool ? 
 
 
-Theory
-======
+## 2 - Theory
 
-Reminder: the SVD
------------------
 
-I'm sorry but we have to go through that, since the PCA is based on the Singular Value Decomposition. 
+### 2.1 - Reminder: the SVD
+The PCA is based on the Singular Value Decomposition. Or at least it is a way to see it.
 
 Consider a matrix $X$ of dimension $(n,p)$ (that is $n$ lines and $p$ columns, or from the statistician's point of view, $n$ individuals and $p$ features if $X$ is the sample matrix). Let's assume that n>p for simplicity (the dimensions of the matrix defined further will change if not). 
-For whatever reason, we're going to decompose this matrix into $3$ matrices. The statement is:
+For whatever reason, we're going to decompose this matrix into $3$ matrices. 
 
 
-There exists a factorization, written as:
+**Statement:** There exists a factorization, written as:
 $$X = U \boldsymbol{\Sigma} V'$$
 
 where:
@@ -48,15 +45,17 @@ where:
 - $U$ is a (n,n), unitary matrix (meaning $UU'=U'U=I$),
 - $\boldsymbol{\Sigma}$ is a (n,p) diagonal matrix with non-negative real numbers on the diagonal (that is to say : full of $0$ but on the diagonal)
 - $V$ is a  (p,p), unitary matrix.
-The diagonal entries, $\sigma_i$, of $\boldsymbol{\Sigma}$ are the *singular values* of $X$. Usually, they are ordered on a decreasing fashion.
+The diagonal entries, $\sigma_i$, of $\boldsymbol{\Sigma}$ are the *singular values* of $X$. Usually, they are ordered on a decreasing fashion. Note that on the formula above, it is transposed.
 
 This is the SVD of $X$.
 
 
-What's beneath the PCA
-----------------------
+**Example:** 
 
-There are many ways to define the PCA, to me the easiest one is to say : the PCA is the SVD of the centered sample matrix. 
+
+### 2.2 What's beneath the PCA
+
+There are many ways to define the PCA, to me the easiest one is to say : **the PCA is the SVD of the centered sample matrix**. 
 
 So let's define $X_c$ the centered sample matrix (we substract the mean of each column to ... each column). Let's also define $X_c= U \boldsymbol{\Sigma} V'$ the SVD of that matrix.
 
@@ -65,27 +64,31 @@ The graph in red
 
 
 
-Application : dimension reduction
-=================================
+
+## 3 - Applications
+
+### 3.1 - Dimension reduction
 
 
-Caveat : an example where correlation ain't absence of relationship
-=======================================================================
+### 3.2 - Basic image compression
 
 
-Bonus : what about a PCA of a LHS? 
-==================================
+## 4 -  Caveat : an example where correlation ain't absence of relationship
+
+
+## 5 - Bonus : what about a PCA of a LHS? 
 
 
 
-Sources:
-========
+## 6 - Sources:
+
 
 - My courses of [statistics](http://wikistat.fr/) by Besse et al (in French)
 
 
-Appendix : Covariance between 2 normal variables that are not independents
-=========================================================================
+## A - Appendix :
+
+### A1:  Covariance between 2 normal variables that are not independents
 
 Let us denote $X\sim \mathcal{N}(2,1)$ and $Y\sim 1.5X+\mathcal{N}(1.2,1)$, we want to know $\text{Cov}(X,Y)$.
 

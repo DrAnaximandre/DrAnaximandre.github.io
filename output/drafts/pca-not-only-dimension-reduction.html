@@ -52,10 +52,10 @@
                 </li>
                 <li class="panel anti-panel"><ul id="collapse-social-small" class="collapse ">
                     <li>
-                        <a href="#" title="Another social link"><i class="fa fa-another-social-link-square fa-lg padding-small"></i></a>
+                        <a href="https://github.com/DrAnaximandre" title="1 - My a repos"><i class="fa fa-1---my-a-repos-square fa-lg padding-small"></i></a>
                     </li>
                     <li>
-                        <a href="#" title="You can add links in your config file"><i class="fa fa-you-can-add-links-in-your-config-file-square fa-lg padding-small"></i></a>
+                        <a href="https://github.com/tboquet" title="2 - My friend's repos"><i class="fa fa-2---my-friend's-repos-square fa-lg padding-small"></i></a>
                     </li>
                 </ul></li>
                 <li class="nav-divider"></li>
@@ -89,15 +89,15 @@
                 </li>
                 <li class="panel anti-panel"><ul id="collapse-social" class="sidebar_submenu collapse ">
                     <li>
-                        <a href="#" title="Another social link">
-                            <i class="fa fa-another-social-link-square fa-lg padding-small"></i>
-                            Another social link
+                        <a href="https://github.com/DrAnaximandre" title="1 - My a repos">
+                            <i class="fa fa-1---my-a-repos-square fa-lg padding-small"></i>
+                            1 - My a repos
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="You can add links in your config file">
-                            <i class="fa fa-you-can-add-links-in-your-config-file-square fa-lg padding-small"></i>
-                            You can add links in your config file
+                        <a href="https://github.com/tboquet" title="2 - My friend's repos">
+                            <i class="fa fa-2---my-friend's-repos-square fa-lg padding-small"></i>
+                            2 - My friend's repos
                         </a>
                     </li>
                 </ul></li>
@@ -180,24 +180,24 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="entry-content">
-                    <h1>First example</h1>
+                    <h2>1 - First example</h2>
 <p>Let's try to understand the method on simulated data first. Let us denote <span class="math">\(X\sim \mathcal{N}(2,1)\)</span> and <span class="math">\(Y\sim 1.5X+\mathcal{N}(1.2,1)\)</span> and have <span class="math">\(1000\)</span> points from the join distributions, that will be our dataset.
 It is straightforward that the two variables are not independant since <span class="math">\(Y\)</span> is basically a coefficient times <span class="math">\(X\)</span> plus some noise and <span class="math">\(X\)</span> is noise. 
 While trying to compute their covariance I go stuck on the distribution of <span class="math">\(XY\)</span> (<a href="http://mathoverflow.net/questions/11800/what-is-the-probability-distribution-function-for-the-product-of-two-correlated">see  : modified Bessel functions of the second kind</a>), but actually you don't really need that to compute the covariance and correlation.
 I have put the details in the appendix and found a correlation of <span class="math">\(\approx.83\)</span> (or a covariance of <span class="math">\(1.5\)</span>, same same).</p>
 <p>So we plot our data (using seaborn yay).</p>
 <p><img alt="Data with correlation" src="/images/figure_PCA_1.png"></p>
-<p>The correlation (on this sample) is 0.82, the marginal distributions are roughly normals (no shit Sherlock) and we have a kind of a line (like a trend) between the dots. The director coefficient of that line ... should be <span class="math">\(1.5\)</span>. Advanced data science. </p>
+<p>The correlation (on this sample) is 0.82, the marginal distributions are roughly normals (how surprising) and we have a kind of a line (like a trend) between the dots. The director coefficient of that line ... should be <span class="math">\(1.5\)</span>. Advanced data science. </p>
 <p>Now I'm going to perform a magic trick : the PCA. Let's use <a href="http://scikit-learn.org/stable/">scikit's</a> implementation. It's basically 1 line of code and no, you don't need to know what a PCA is so far, just observe.</p>
 <p><img alt="Same data after the PCA" src="/images/figure_PCA_2.png"></p>
 <p>What the flip ? The marginals are still roughly normals (although the order of magnitude -the values on the axis - changed), but the correlation is super-duper small (<span class="math">\(e-16\)</span>), consequently the dots look more like a realisation of 2 independants normals (but it's not). Also the dots are red now. </p>
 <p>What happened here ? And why is it useful/cool ? </p>
-<h1>Theory</h1>
-<h2>Reminder: the SVD</h2>
-<p>I'm sorry but we have to go through that, since the PCA is based on the Singular Value Decomposition. </p>
+<h2>2 - Theory</h2>
+<h3>2.1 - Reminder: the SVD</h3>
+<p>The PCA is based on the Singular Value Decomposition. Or at least it is a way to see it.</p>
 <p>Consider a matrix <span class="math">\(X\)</span> of dimension <span class="math">\((n,p)\)</span> (that is <span class="math">\(n\)</span> lines and <span class="math">\(p\)</span> columns, or from the statistician's point of view, <span class="math">\(n\)</span> individuals and <span class="math">\(p\)</span> features if <span class="math">\(X\)</span> is the sample matrix). Let's assume that n&gt;p for simplicity (the dimensions of the matrix defined further will change if not). 
-For whatever reason, we're going to decompose this matrix into <span class="math">\(3\)</span> matrices. The statement is:</p>
-<p>There exists a factorization, written as:
+For whatever reason, we're going to decompose this matrix into <span class="math">\(3\)</span> matrices. </p>
+<p><strong>Statement:</strong> There exists a factorization, written as:
 </p>
 <div class="math">$$X = U \boldsymbol{\Sigma} V'$$</div>
 <p>where:</p>
@@ -208,18 +208,19 @@ For whatever reason, we're going to decompose this matrix into <span class="math
 The diagonal entries, <span class="math">\(\sigma_i\)</span>, of <span class="math">\(\boldsymbol{\Sigma}\)</span> are the <em>singular values</em> of <span class="math">\(X\)</span>. Usually, they are ordered on a decreasing fashion.</li>
 </ul>
 <p>This is the SVD of <span class="math">\(X\)</span>.</p>
-<h2>What's beneath the PCA</h2>
+<h3>2.2 What's beneath the PCA</h3>
 <p>There are many ways to define the PCA, to me the easiest one is to say : the PCA is the SVD of the centered sample matrix. </p>
 <p>So let's define <span class="math">\(X_c\)</span> the centered sample matrix (we substract the mean of each column to ... each column). Let's also define <span class="math">\(X_c= U \boldsymbol{\Sigma} V'\)</span> the SVD of that matrix.</p>
 <p>The graph in red </p>
-<h1>Application : dimension reduction</h1>
-<h1>Caveat : an example where correlation ain't absence of relationship</h1>
-<h1>Bonus : what about a PCA of a LHS?</h1>
-<h1>Sources:</h1>
+<h2>3 - Application : dimension reduction</h2>
+<h2>4 -  Caveat : an example where correlation ain't absence of relationship</h2>
+<h2>5 - Bonus : what about a PCA of a LHS?</h2>
+<h2>6 - Sources:</h2>
 <ul>
 <li>My courses of <a href="http://wikistat.fr/">statistics</a> by Besse et al (in French)</li>
 </ul>
-<h1>Appendix : Covariance between 2 normal variables that are not independents</h1>
+<h2>A - Appendix :</h2>
+<h3>A1:  Covariance between 2 normal variables that are not independents</h3>
 <p>Let us denote <span class="math">\(X\sim \mathcal{N}(2,1)\)</span> and <span class="math">\(Y\sim 1.5X+\mathcal{N}(1.2,1)\)</span>, we want to know <span class="math">\(\text{Cov}(X,Y)\)</span>.</p>
 <ul>
 <li>
