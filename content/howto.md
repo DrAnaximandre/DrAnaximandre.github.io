@@ -8,11 +8,8 @@ Useful links
 ============
 
 - [The funding father](http://beneathdata.com/how-to/how-i-built-this-website/)
-
 - [MD cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
 - Clone the repo of the blog.
-
 - You might need to clone the submodules as well, namely pelican-twitchy and
 render_math (it is easier to clone the whole [repo of plugins](https://github.com/getpelican/pelican-plugins)).
 
