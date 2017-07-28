@@ -8,7 +8,14 @@ Useful links
 ============
 
 - [The funding father](http://beneathdata.com/how-to/how-i-built-this-website/)
+
 - [MD cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+- Clone the repo of the blog.
+
+- You might need to clone the submodules as well, namely pelican-twitchy and
+render_math (it is easier to clone the whole [repo of plugins](https://github.com/getpelican/pelican-plugins)).
+
 
 Tune your sublime
 ================
@@ -20,7 +27,7 @@ Tune your sublime
 Usual loop
 ==========
 
-* do modifications
+* do modifications, such as wrinting stuff.
 * check locally your modifications: `fab build` and `fab serve`, then [go there if you are running locally](http://localhost:8000)
 * Once you're done modifying things, do `git add <your-modifications>` and `git commit -m "i-changed-sources"` followed by `git push`. That should ensure that your sources are up-to-date.
 * No need to checkout to master: `ghp-import -b master -m "i-changed-the-output" output`

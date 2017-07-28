@@ -40,7 +40,8 @@ DEFAULT_PAGINATION = 5
 #RELATIVE_URLS = True
 
 STATIC_PATHS = ['images/favicon.ico']
-PLUGINS = ["pelican_plugin-render_math"]
+PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS = ["render_math"]
 DEFAULT_METADATA = {
     'status': 'draft',
 }

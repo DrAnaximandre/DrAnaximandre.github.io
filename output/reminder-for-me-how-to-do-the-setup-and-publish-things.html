@@ -165,7 +165,7 @@
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2016-11-11T00:00:00-05:00"> Fri 11 November 2016</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2016-11-11T00:00:00-05:00"> ven 11 novembre 2016</time>
             </span>
             <span class="category">
                 <i class="fa fa-folder-open padding-small"></i><a href="/category/setup.html">Setup</a>
@@ -183,7 +183,13 @@
                     <h1>Useful links</h1>
 <ul>
 <li><a href="http://beneathdata.com/how-to/how-i-built-this-website/">The funding father</a></li>
-<li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">MD cheatsheet</a></li>
+<li>
+<p><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">MD cheatsheet</a></p>
+</li>
+<li>
+<p>You might need to clone the submodules as well, namely pelican-twitchy and
+pelican_plugin-render_math.</p>
+</li>
 </ul>
 <h1>Tune your sublime</h1>
 <ul>
@@ -192,7 +198,7 @@
 </ul>
 <h1>Usual loop</h1>
 <ul>
-<li>do modifications</li>
+<li>do modifications, such as wrinting stuff.</li>
 <li>check locally your modifications: <code>fab build</code> and <code>fab serve</code>, then <a href="http://localhost:8000">go there if you are running locally</a></li>
 <li>Once you're done modifying things, do <code>git add &lt;your-modifications&gt;</code> and <code>git commit -m "i-changed-sources"</code> followed by <code>git push</code>. That should ensure that your sources are up-to-date.</li>
 <li>No need to checkout to master: <code>ghp-import -b master -m "i-changed-the-output" output</code></li>
