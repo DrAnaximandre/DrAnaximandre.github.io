@@ -205,14 +205,17 @@ For whatever reason, we're going to decompose this matrix into <span class="math
 <li><span class="math">\(U\)</span> is a (n,n), unitary matrix (meaning <span class="math">\(UU'=U'U=I\)</span>),</li>
 <li><span class="math">\(\boldsymbol{\Sigma}\)</span> is a (n,p) diagonal matrix with non-negative real numbers on the diagonal (that is to say : full of <span class="math">\(0\)</span> but on the diagonal)</li>
 <li><span class="math">\(V\)</span> is a  (p,p), unitary matrix.
-The diagonal entries, <span class="math">\(\sigma_i\)</span>, of <span class="math">\(\boldsymbol{\Sigma}\)</span> are the <em>singular values</em> of <span class="math">\(X\)</span>. Usually, they are ordered on a decreasing fashion.</li>
+The diagonal entries, <span class="math">\(\sigma_i\)</span>, of <span class="math">\(\boldsymbol{\Sigma}\)</span> are the <em>singular values</em> of <span class="math">\(X\)</span>. Usually, they are ordered on a decreasing fashion. Note that on the formula above, it is transposed.</li>
 </ul>
 <p>This is the SVD of <span class="math">\(X\)</span>.</p>
+<p><strong>Example:</strong> </p>
 <h3>2.2 What's beneath the PCA</h3>
-<p>There are many ways to define the PCA, to me the easiest one is to say : the PCA is the SVD of the centered sample matrix. </p>
+<p>There are many ways to define the PCA, to me the easiest one is to say : <strong>the PCA is the SVD of the centered sample matrix</strong>. </p>
 <p>So let's define <span class="math">\(X_c\)</span> the centered sample matrix (we substract the mean of each column to ... each column). Let's also define <span class="math">\(X_c= U \boldsymbol{\Sigma} V'\)</span> the SVD of that matrix.</p>
 <p>The graph in red </p>
-<h2>3 - Application : dimension reduction</h2>
+<h2>3 - Applications</h2>
+<h3>3.1 - Dimension reduction</h3>
+<h3>3.2 - Basic image compression</h3>
 <h2>4 -  Caveat : an example where correlation ain't absence of relationship</h2>
 <h2>5 - Bonus : what about a PCA of a LHS?</h2>
 <h2>6 - Sources:</h2>
