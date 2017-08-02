@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="DrAnaximandre" />
+        <meta name="keywords" content="Python,Art" />
         <meta name="description" content="This is the guidelines to use the code in the repo. It&#39;s also useful for me." />
 
 
-    <title>FlapePython2 - how to use that crappy code - Asmall7</title>
+    <title>FlamePython2 - how to use that code - Asmall7</title>
 
         <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
 
@@ -52,10 +53,10 @@
                 </li>
                 <li class="panel anti-panel"><ul id="collapse-social-small" class="collapse ">
                     <li>
-                        <a href="#" title="Another social link"><i class="fa fa-another-social-link-square fa-lg padding-small"></i></a>
+                        <a href="https://github.com/DrAnaximandre" title="1 - My a repos"><i class="fa fa-1---my-a-repos-square fa-lg padding-small"></i></a>
                     </li>
                     <li>
-                        <a href="#" title="You can add links in your config file"><i class="fa fa-you-can-add-links-in-your-config-file-square fa-lg padding-small"></i></a>
+                        <a href="https://github.com/tboquet" title="2 - My friend's repos"><i class="fa fa-2---my-friend's-repos-square fa-lg padding-small"></i></a>
                     </li>
                 </ul></li>
                 <li class="nav-divider"></li>
@@ -89,15 +90,15 @@
                 </li>
                 <li class="panel anti-panel"><ul id="collapse-social" class="sidebar_submenu collapse ">
                     <li>
-                        <a href="#" title="Another social link">
-                            <i class="fa fa-another-social-link-square fa-lg padding-small"></i>
-                            Another social link
+                        <a href="https://github.com/DrAnaximandre" title="1 - My a repos">
+                            <i class="fa fa-1---my-a-repos-square fa-lg padding-small"></i>
+                            1 - My a repos
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="You can add links in your config file">
-                            <i class="fa fa-you-can-add-links-in-your-config-file-square fa-lg padding-small"></i>
-                            You can add links in your config file
+                        <a href="https://github.com/tboquet" title="2 - My friend's repos">
+                            <i class="fa fa-2---my-friend's-repos-square fa-lg padding-small"></i>
+                            2 - My friend's repos
                         </a>
                     </li>
                 </ul></li>
@@ -155,21 +156,24 @@
             <div class="col-lg-9">
                 <header class="page-header">
                     <h1>
-                        <a href="/drafts/flapepython2-how-to-use-that-crappy-code.html"
+                        <a href="/drafts/flamepython2-how-to-use-that-code.html"
                            rel="bookmark"
-                           title="Permalink to FlapePython2 - how to use that crappy code">
-                            FlapePython2 - how to use that crappy code
+                           title="Permalink to FlamePython2 - how to use that code">
+                            FlamePython2 - how to use that code
                         </a>
                         <small>
 <div class="post-info">
     <div class="publish-info-block">
         <small>
             <span class="published">
-                <i class="fa fa-calendar padding-small"></i><time datetime="2015-12-02T00:00:00-05:00"> mer 02 décembre 2015</time>
+                <i class="fa fa-calendar padding-small"></i><time datetime="2017-08-01T00:00:00-04:00"> mar 01 août 2017</time>
             </span>
             <span class="category">
-                <i class="fa fa-folder-open padding-small"></i><a href="/category/python-fractales-art.html">Python, Fractales, Art</a>
+                <i class="fa fa-folder-open padding-small"></i><a href="/category/fractals.html">Fractals</a>
             </span>
+            <span class="tags">
+                <i class="fa fa-tags padding-small"></i>
+                <a href="/tag/python.html">Python</a> /                 <a href="/tag/art.html">Art</a>            </span>
         </small>
     </div>
 </div><!-- /.post-info -->                        </small>
@@ -183,10 +187,67 @@
                     <h2>What is the purpose of this article?</h2>
 <p>Mostly it's to help people use the code in the <a href="https://github.com/DrAnaximandre/FlamePython2">repo</a>.</p>
 <h2>What are Flames Fractals ?</h2>
-<p>You need to read the article by <a href="http://flam3.com/flame_draves.pdf">Draves and Reckase</a>.</p>
+<p>The main reference is <a href="http://flam3.com/flame_draves.pdf">Draves and Reckase</a>. You could read it through and through, but let me propose a shorter, simplified version.</p>
+<p>Let us have a colored point, called Robert. Robert is a white point, with coordinates somewhere in <span class="math">\([-1, 1]^2\)</span> (and RGB 255, 255, 255). Let us also have a function, <span class="math">\(F\)</span>, that goes from <span class="math">\([-1, 1]^2 * [0,255]^3\)</span> to <span class="math">\([-1, 1]^2 * [0,255]^3\)</span>. In other words, F_0 takes a colored point and return another colored point.</p>
+<p>The result of inputing Robert into F will be denoted Robert_1, and you can also put Robert_1 into F, you'd get Robert_2.</p>
 <h2>I don't get it. Can you make another example?</h2>
 <p>Sure!</p>
 <h2>Deep down in the fractals</h2>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
                 </div>
                 <footer class="text-right">
                     <p>- DrAnaximandre</p>
