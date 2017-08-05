@@ -188,11 +188,14 @@
 <p>Mostly it's to help people use the code in the <a href="https://github.com/DrAnaximandre/FlamePython2">repo</a>.</p>
 <h2>What are Flames Fractals ?</h2>
 <p>The main reference is <a href="http://flam3.com/flame_draves.pdf">Draves and Reckase</a>. You could read it through and through, but let me propose a shorter, simplified version.</p>
-<p>Let us have a colored point, called Robert. Robert is a white point, with coordinates somewhere in <span class="math">\([-1, 1]^2\)</span> (and RGB 255, 255, 255). Let us also have a function, <span class="math">\(F\)</span>, that goes from <span class="math">\([-1, 1]^2 * [0,255]^3\)</span> to <span class="math">\([-1, 1]^2 * [0,255]^3\)</span>. In other words, F_0 takes a colored point and return another colored point.</p>
-<p>The result of inputing Robert into F will be denoted Robert_1, and you can also put Robert_1 into F, you'd get Robert_2.</p>
-<h2>I don't get it. Can you make another example?</h2>
-<p>Sure!</p>
-<h2>Deep down in the fractals</h2>
+<p>Let us have a colored point, called Robert. Robert is a white point, with coordinates somewhere in <span class="math">\([-1, 1]^2\)</span> (and RGB 255, 255, 255).</p>
+<p><img alt="Image of Robert" src="/images/robert.png"></p>
+<p>Let us also have a "function", <span class="math">\(F\)</span>, that goes from <span class="math">\([-1, 1]^2 * [0,255]^3\)</span> to <span class="math">\([-1, 1]^2 * [0,255]^3\)</span>. In other words, <span class="math">\(F\)</span> takes a colored point such as Robert and return another colored point.</p>
+<p>The result of inputing Robert into <span class="math">\(F\)</span> will be denoted Robertson, and you can also put Robertson into F, you'd get Robertsonson and so on.</p>
+<p><img alt="Image of Robert and some sons" src="/images/robertson.png"></p>
+<p>Now why did I put some quotes around "function" when talking about <span class="math">\(F\)</span>? Actually <span class="math">\(F\)</span> is not quite a function but more of a random variable. You can see on the above example that the one application of <span class="math">\(F\)</span> transformed Robert into Robertson moved it up, whereas the application of <span class="math">\(F\)</span> that transformed Robertson into Robertsonson moved it left. What happened ? Well, for this example, <span class="math">\(F\)</span> was such that one application had one chance out of two to move the point up, and one chance out of two to move it right.</p>
+<p>And that is the core of the algorithm: we will apply several time the same random function to a bunch of points, and it will magically converge to a stable distribution (a few more steps are required to transform the points into a distribution estimation but the idea is here). So every image is a MC estimation of a 2-D density (the colours are just here for esthetical purpose).</p>
+<h2>Flame Fractals 101: the Serpinski Triangle.</h2>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",

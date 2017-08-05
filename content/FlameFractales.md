@@ -27,7 +27,11 @@ The result of inputing Robert into $F$ will be denoted Robertson, and you can al
 
 ![Image of Robert and some sons](/images/robertson.png)
 
-Now why did I put some quotes around "function" when talking about $F$? Actually $F$ is not quite a function but a random variable. You can see on the above example that the one application of $F$ transformed Robert into Robertson moved it up, whereas the application of $F$ that transformed Robertson into Robertsonson moved it left. What happened ? Well, for this example, $F$ was such that one application had one chance out of two to move the point up, and one chance out of two to move it right.
+Now why did I put some quotes around "function" when talking about $F$? Actually $F$ is not quite a function but more of a random variable. You can see on the above example that the one application of $F$ transformed Robert into Robertson moved it up, whereas the application of $F$ that transformed Robertson into Robertsonson moved it left. What happened ? Well, for this example, $F$ was such that one application had one chance out of two to move the point up, and one chance out of two to move it right.
 
 
+And that is the core of the algorithm: we will apply several time the same random function to a bunch of points, and it will magically converge to a stable distribution (a few more steps are required to transform the points into a distribution estimation but the idea is here). So every image is a MC estimation of a 2-D density (the colours are just here for esthetical purpose).
 
+
+Flame Fractals 101: the Serpinski Triangle.
+-------------------------------------------
